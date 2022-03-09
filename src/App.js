@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Cart from './components/cart/Cart';
+import Shop from './components/shop/Shop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="topbar" style={{ backgroundColor: '#283739', padding: '40px 0' }}>
+        <div className="cart" style={{width: '80%', margin: 'auto'}}>
+          <Cart></Cart>
+        </div>
+      </div>
+      <div className="mainbody" style={{ width: '80%', margin: "auto" }}>
+        <Shop></Shop>
+      </div>
     </div>
   );
 }
